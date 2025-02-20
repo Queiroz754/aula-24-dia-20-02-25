@@ -1,0 +1,81 @@
+/*
+Autor:Allan Barbosa de Querioz
+Programa:Semaforo
+Descricao: Exercicio 
+Data 19/02/2025
+*/
+
+#define pinLEDVermelho 2
+#define pinLEDAmarelo 3
+#define pinLEDVerde 4
+#define pinLEDVermelho2 8
+#define pinLEDAmarelo2 9
+#define pinLEDVerde2 10
+#define pinLEDVerde3 6
+#define pinLEDVerde4 12
+#define pinLEDVermelho3 5
+#define pinLEDVermelho4 11
+#define tempoPiscaVermelho 5000
+#define tempoPiscaAmarelo 2000
+#define tempoPiscaVerde 3000
+#define piscaPisca 500
+void setup ()
+{
+  pinMode (pinLEDVermelho,OUTPUT);
+  pinMode (pinLEDAmarelo,OUTPUT);
+  pinMode (pinLEDVerde,OUTPUT);
+    pinMode (pinLEDVermelho2,OUTPUT);
+  pinMode (pinLEDAmarelo2,OUTPUT);
+  pinMode (pinLEDVerde2,OUTPUT);
+  pinMode (pinLEDVerde3,OUTPUT);
+  pinMode (pinLEDVerde4,OUTPUT);
+   pinMode (pinLEDVermelho3,OUTPUT);
+   pinMode (pinLEDVermelho4,OUTPUT);
+}
+
+void loop ()
+{
+digitalWrite(pinLEDVermelho,HIGH);
+  digitalWrite(pinLEDVerde2,HIGH);
+  digitalWrite(pinLEDVerde3,HIGH);
+  digitalWrite(pinLEDVermelho4,HIGH);
+  delay (tempoPiscaVermelho);
+  digitalWrite(pinLEDVerde2,LOW);
+ digitalWrite(pinLEDAmarelo2,HIGH);
+  delay (tempoPiscaAmarelo);
+  digitalWrite(pinLEDVerde3,LOW);
+  digitalWrite (pinLEDVermelho3,HIGH);
+  delay (piscaPisca);
+  digitalWrite (pinLEDVermelho3,LOW);
+  delay (piscaPisca);
+    digitalWrite(pinLEDVermelho3,HIGH);
+   delay (piscaPisca);
+  digitalWrite (pinLEDVermelho3,LOW);
+  delay (piscaPisca);
+  digitalWrite(pinLEDVermelho3,HIGH);
+  digitalWrite(pinLEDAmarelo2,LOW);
+  digitalWrite(pinLEDVermelho,LOW);
+
+ digitalWrite (pinLEDVerde,HIGH);
+  digitalWrite(pinLEDVermelho2,HIGH);
+  digitalWrite (pinLEDVermelho4,LOW);
+  digitalWrite(pinLEDVerde4,HIGH);
+  delay(tempoPiscaVermelho);
+  digitalWrite (pinLEDVerde,LOW);
+  digitalWrite (pinLEDAmarelo,HIGH);
+  delay (tempoPiscaAmarelo);
+  digitalWrite(pinLEDVerde4,LOW);
+  digitalWrite(pinLEDVermelho4,HIGH);
+  delay (piscaPisca);
+  digitalWrite(pinLEDVermelho4,LOW);
+  delay (piscaPisca);
+  digitalWrite(pinLEDVermelho4,HIGH);
+  delay (piscaPisca);
+    digitalWrite(pinLEDVermelho4,LOW);
+  delay (piscaPisca);
+  digitalWrite(pinLEDVermelho4,HIGH);
+  digitalWrite (pinLEDVermelho2,LOW);
+  digitalWrite (pinLEDAmarelo,LOW);
+  digitalWrite (pinLEDVermelho,HIGH);
+  digitalWrite (pinLEDVermelho3,LOW);
+}

@@ -1,0 +1,35 @@
+/*
+Autor:Allan Babosa de Queiroz
+Programa:Pisca - Pisca
+Descriçao: Este e meu primeiro cadigo em arduino . pisca o pino13
+Data 19/02/2025
+*/
+
+#define pinLED 8 
+#define tempoPisca 150
+//define apelida uma palavra
+//para melhorar o intendimento pro codigo
+
+/*Regras pra usar o difine
+1 Nao pode conter espasos
+2 Nao pode iniciar com numero
+3 O unico caracter esoecial permitido e o  _
+4 Nao pode ser uma palavra reservada
+5 usar nomes altos explicativos
+6 sempre utilizar nomes q explique oq o difine faz 
+nao para oq serve(facilitando a leitura do cadigo posteriormente)
+*/
+void setup () //pre definicao do arduino
+{
+ pinMode(pinLED,OUTPUT); //define o pino 13 como saida
+}
+
+
+void loop () //apos o setap o programa fica em loop
+{
+  digitalWrite(pinLED, HIGH);//ligar led pino 13
+  delay (tempoPisca); /*guardar 1000 ms quando utilizamos o delay 
+  uino tava pelo tempo determinado*/
+  digitalWrite(pinLED,LOW);//desliga o led
+  delay(tempoPisca);//aguardar 1000 ms
+}
