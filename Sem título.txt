@@ -1,0 +1,112 @@
+/*
+Nome do Arquivo: matematica
+Autor:Allan Barbosa de Queiroz
+Data:24/02/2025
+Descricao:
+*/
+
+//*********DECLARACAO DE VARIAVEIS GLOBAL**********
+ int numeroA = 14;
+// int so recebe numero inteiro
+   int numeroB = 5;
+   int resultado = 0;
+float resultadoReal=0;
+ int valor = 750;
+   int deMenor =500;
+   int deMaior =1000;
+   int paraMenor =0;
+   int paraMaior =10;
+
+
+void setup ()
+
+{
+
+  //*****Soma*****
+  Serial.begin(9600);
+ resultado = numeroA + numeroB;  
+ Serial.print("A suma do numero A com o numeroB eh: ");
+  Serial.println (resultado);
+  //*****Subtracao******
+  resultado= numeroB - numeroA;
+  Serial.print ("A subtracao de numero B pela A: ");
+  Serial.println(resultado);
+  //*******Multiplicacao******
+  resultado = numeroA * numeroB;
+  Serial.print ("A multiplicacao de A e B ed: ");
+  Serial.println(resultado);
+  //****Divisao******
+  resultado = numeroA /numeroB;
+  Serial.print("A divisao de A por B eh: ");
+  Serial.println(resultado);
+  resultado = numeroA%numeroB;
+  Serial.print("e sobra: ");
+  Serial.println(resultado);
+  resultadoReal = ((float)numeroA / (float)numeroB);
+  Serial.print("Ou ");
+  Serial.println(resultadoReal,1); //limita a imprecao do resultado
+  //em um casa decimal
+  //******Potencia******
+  resultado = pow(numeroA,numeroB);//'a' elevado a 'b'
+  Serial.print ("numero A elevado a numero B eh: ");
+  Serial.println (resultado);
+  //******Quadrado*****
+  resultado = sq(numeroA);// numeroA elevado ao quadrado
+    Serial.print ("numero A elevado ao quadrado eh: ");
+  Serial.println(resultado);
+  //****Riz Quadrada*****
+  resultado = sqrt(numeroA);
+  Serial.print("A raiz quadrada de numero A eh: ");
+  Serial.println (resultadoReal);
+  
+  
+  
+  //******Modulo*******
+  resultado = abs (numeroA * -1);
+  Serial.print("O modulo do numero A eh: ");
+  Serial.println(resultado);
+  
+  
+  
+  
+  //*******REstricao*****
+  resultado = constrain(numeroA,-3,5);//restringe a variavel numero A aos
+//limites -3 e 5  
+  
+  
+  //********Remapeamento*******
+  resultado= map(numeroA,0,20,0,10);//map (valor, deMenor,deMaior,paraMenor,paraMaior)
+  Serial.println(resultado);
+  
+  
+  //******Operadores de atribuicao******
+ //numeroA = numeroA + 5;
+  Serial.println(numeroA += 5);
+  //numeroA=numeroA -5;
+  Serial.println(numeroA -=5);
+  
+  //numeroA = numeroA * 2;
+  Serial.println(numeroA *= 2);
+  
+  //numeroA =numeroA / 2;
+  Serial.println(numeroA /= 2);
+  
+//incrementar A Variavel
+  //numeroA = numeroA  + 1;
+  Serial.println(numeroA++);//pos incremento
+ Serial.println(++numeroA);//pre incremento
+  
+  //decremento a variavel
+  //numeroA = numeroA -1
+  Serial.println(numeroA--);//pos incremento
+  Serial.println(--numeroA);//pre incremento
+  
+  
+}
+void loop ()
+{
+  
+  
+  
+  
+}
