@@ -1,0 +1,46 @@
+/*Auto:Allan Barbosa de Queiroz
+Nome:Caculo de imc
+Data:25/02/2025
+*/
+float peso = 86.0;
+float altura = 1.90;
+float imc = 0.0;
+ /*
+ Peso Normal:entre 20 e 24
+ excesso de peso:25 e 29
+ Obesidade :30 e 34
+ Obesidade Morbida:superior a 35
+ */
+
+
+
+void setup (){
+ Serial.begin(9600);
+   imc = peso/ pow (altura,2); 
+  Serial.print ("Seu imc eh:");
+  Serial.println(imc);
+  
+   if (imc < 20.0){
+     Serial.println("voce esta desnutrido");      
+   }
+  else if (imc >= 20.0 & imc < 24.0) {
+  Serial.println("Peso normal");
+  }
+  else if (imc >= 24.0 & imc < 29.0) {
+    Serial.println("excesso de peso");}
+  
+    else if (imc >= 29.0 & imc < 35.0){
+    Serial.println("Obesidade");
+    }
+  else{
+  Serial.println("Obesidade Morbida");
+  }
+  
+
+}
+
+
+
+
+
+void loop (){}
