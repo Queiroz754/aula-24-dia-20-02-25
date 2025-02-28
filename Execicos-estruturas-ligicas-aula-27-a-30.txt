@@ -1,0 +1,224 @@
+/*Auto:Allan Barbosa de Queiroz
+Nome:Caculo de imc e exercicios de logica da programacao
+Descricao: 10 Exercicios de logica e calculo de imc
+Data:25/02/2025 a 28/02/25
+Aula:27 a 30
+*/
+
+#define pinledTemperatura 2
+#define pinledBateria 3
+#define pinledValor 4
+#define pinledPar 5
+#define ledVermelho 10
+#define ledVerde 9
+#define ledAzul 8
+#define ledAmarelo 7
+#define ledBranco 6
+// atividade1
+int temperatura = 31;
+
+// atividade 2
+int bateria = 25;
+
+
+// atividade 3
+int valor = 300;
+
+int valorMap = 0;
+
+//atividade 4
+int valor2 = 205;
+
+
+
+  
+float peso = 73.0;
+float altura = 1.54;
+float imc = 0.0;
+
+
+
+void setup (){
+
+  Serial.begin(9600);
+  pinMode (pinledTemperatura,OUTPUT);
+   pinMode (pinledBateria,OUTPUT);
+  pinMode (pinledValor,OUTPUT);
+  pinMode (pinledPar,OUTPUT);
+  valorMap = map (valor,0,1023,0,100);
+  
+  
+  /**************Calculo imc ******
+   imc = peso/ pow (altura,2); 
+  Serial.print ("Seu imc eh:");
+  Serial.println(imc);
+  
+   if (imc < 20.0){
+     Serial.println("voce esta desnutrido");      
+   }
+  else if (imc >= 20.0 & imc < 24.0) {
+  Serial.println("Peso normal");
+  }
+  else if (imc >= 24.0 & imc < 29.0) {
+    Serial.println("excesso de peso");}
+  
+    else if (imc >= 29.0 & imc < 35.0){
+    Serial.println("Obesidade");
+    }
+  else{
+  Serial.println("Obesidade Morbida");
+  }
+   */
+  
+   // ******Exercicio 1 ********
+  /*
+   if (temperatura >30){
+  digitalWrite(pinledTemperatura,HIGH);
+  }
+ */
+  
+  
+  // *********Exercicio 2 ********
+  /*
+  if (bateria > 20 && bateria <80){
+  Serial.print("A bateria esta com: ");
+    Serial.print (bateria);
+  }
+  */
+  
+  
+  // ******** Exercicio 3 *******
+  /*
+   if (valorMap >=20 && valorMap <=80){
+    digitalWrite(pinledValor,HIGH); 
+   Serial.print ("O valor ");
+  Serial.println (valor);
+  Serial.print (" exedeu os limites o valor foi reajustado para ");
+  Serial.println (valorMap);
+  }
+  */
+  
+  
+  // ******* Exercicio 4 ******
+  /*
+  if (valor2 % 2 == 0){
+    digitalWrite(pinledPar,HIGH);
+    Serial.print("Seu numero e par");
+  }else { Serial.println("Seu numero e impar");}
+  */
+  
+  // **********Exercicio 5 **********
+/*
+
+  
+ int numero = -100;
+  
+  if (numero >= 0 ){
+    Serial.println("este numero e positivo");
+  } else { 
+Serial.println ("este numero e negativo");
+  }
+}
+*/
+  
+  // ********Exercicio 6 *******
+  
+  /*
+  auto nome = "Allan";
+    auto cargo = "estagiario";
+    int salario = 1000;
+  int aumento = (salario*0.1)+salario;
+  if (salario >= 1000){
+  Serial.print("O Funcionario ");
+    Serial.print(nome);
+     Serial.print (" com o cargo ");
+     Serial.print(cargo);
+     Serial.print (" recebera o almento de ");
+     Serial.print (aumento);
+  } else{
+   Serial.print("O Funcionario");
+    Serial.print(nome);
+     Serial.print ("com o cargo");
+     Serial.print(cargo);
+     Serial.print ("Nao recebera o almento");
+  }
+  */
+  
+  // ******** Exercicio7 *******
+ /* 
+  int salario =499;
+  
+  int aumento = (salario*0.3) + salario;
+  
+    if (salario < 500) {
+  Serial.print("seu salario aumentara para ");
+       Serial.println (aumento);
+  } else Serial.print("Voce nao recebera o almento");
+  */
+  
+  // ******** Exercicio8 ******
+  /*
+  int numero = 2;
+    int numero2 = 3;
+  if (numero > numero2) {
+    Serial.print("O numero maior e ");
+  Serial.println(numero);
+  } else  {Serial.print("O numero maior e ");
+    Serial.println(numero2);}
+*/
+  
+  
+  
+  
+  // ******** Exercicio 9 *******
+  /*
+  int nota = 5;
+  int nota2 = 7;
+  int nota3 = 10;
+  int nota4 = 5;
+  int media = (nota+nota2+nota3+nota4) / 4 ;
+  Serial.println (media);
+    
+  if (media > 7){
+  Serial.print("voce esta aprovado");
+  } else if (media> 5 && media <= 7){
+  Serial.print("Voce esta de recuperacao");
+  } else {
+  Serial.print("voce esta reprovado");
+  }
+  */
+// *********** Exercico 10 ***********
+  /*l
+  int leds = 2;
+
+  
+  pinMode(ledVermelho,OUTPUT);
+  pinMode(ledVerde,OUTPUT);
+  pinMode(ledAzul,OUTPUT);
+  pinMode(ledAmarelo,OUTPUT);
+  pinMode(ledBranco,OUTPUT);
+  
+  switch(leds){
+  case 1:
+    digitalWrite(ledVermelho,HIGH);
+    break;
+     case 2:
+    digitalWrite(ledVerde,HIGH);
+    break;
+     case 3:
+    digitalWrite(ledAzul,HIGH);
+    break;
+     case 4:
+    digitalWrite(ledAmarelo,HIGH);
+    break;
+     case 5:
+    digitalWrite(ledBranco,HIGH);
+    break;
+  }
+  */
+  
+  
+  
+  
+}
+void loop (){}
